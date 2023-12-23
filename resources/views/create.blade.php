@@ -1,20 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Tambah data mahasiswa</title>
-</head>
-<body>
+@extends('template')
+
+@section('content')
 <h1>Tambah Data Mahasiswa</h1>
-
-
-	<a href="" class="btn btn-primary btn-sm mb-3">Kembali</a>
-	<form action="/crud" method="post">
-	
+	<a href="/Mahasiswa" class="btn btn-primary btn-sm mb-3">Kembali</a>
+	<form action="/Mahasiswa" method="post">
+	@csrf
 		<div class="mb-3">
 			<label for="">Nama Lengkap</label>
-			<input type="text" class="form-control" name="Nama_Lengkap">
+			<input type="text" class="form-control" name="Nama Lengkap">
 		</div>
 		<div class="mb-3">
 			<label for="">Nim</label>
@@ -22,7 +15,7 @@
 		</div>
 		<div class="mb-3">
 			<label for="">Tanggal Lahir</label>
-			<input type="date" class="form-control" name="Tanggal_Lahir">
+			<input type="date" class="form-control" name="Tanggal Lahir">
 		</div>
 		<div class="mb-3">
 			<label for="">Jenis Kelamin</label>
@@ -34,7 +27,7 @@
 		</div>
 		<div class="mb-3">
 			<label for="">Asal Sekolah</label>
-			<input type="text" class="form-control" name="Asal_Sekolah">
+			<input type="text" class="form-control" name="Asal Sekolah">
 		</div>
 		<div class="mb-3">
 			<label for="">Jalur Masuk</label>
@@ -49,9 +42,10 @@
 			<input type="text" class="form-control" name="Email">
 		</div>
 		<div>
-			<button><a href="index" class="btn btn-primary btn-sm">Simpan</a></button>
+			<button class="btn btn-primary btn-sm" type="submit">Simpan</button>
 		</div>
 	</form>
 
 </body>
 </html>
+@endsection

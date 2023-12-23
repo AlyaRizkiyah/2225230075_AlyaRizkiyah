@@ -1,7 +1,10 @@
-<style type="css/index"></style>
+ 
+@extends('template')
+@section('content')
+
     <h1>Daftar Mahasiswa Matematika FKIP Untirta 2023</h1>
     <a href="create" class="btn btn-primary btn-sm">Tambah Data</a>
-    <table border="1" cellpadding="10" cellspacing="0">
+    <table class="table table-bordered">
       
       <thead>
         <tr>
@@ -16,18 +19,18 @@
           <th>Aksi</th>
         </tr>
       </thead>
-        
-       
+
+
         <tbody>
         <tr>
-          <td><?php ['id']; ?></td>
-          <td><?php ['Nama_Lengkap']; ?></td>
-           <td><?php ['Nim']; ?></td>
-           <td><?php ['Tanggal_Lahir']; ?></td>
-           <td><?php ['Jenis_Kelamin']; ?></td>
-           <td><?php ['Asal_Sekolah']; ?></td>
-           <td><?php ['Jalur_Masuk']; ?></td>
-           <td><?php ['Email']; ?></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
           <td>
             <button class="btn btn-primary btn-sm">Detail</button>
             <button class="btn btn-primary btn-sm">Edit</button>
@@ -37,8 +40,6 @@
       </tbody>
 
       
-      
-      
     </table>
-
+@endsection
   

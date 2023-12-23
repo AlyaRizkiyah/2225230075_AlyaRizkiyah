@@ -9,6 +9,6 @@ class Mahasiswa extends Model
 {
     use HasFactory;
 
-    protected $table ='_Mahasiswas';
+    protected $guarded = ['id'];
    
 }

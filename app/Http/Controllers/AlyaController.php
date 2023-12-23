@@ -15,7 +15,9 @@ class AlyaController extends Controller
      */
     public function index()
     {
+
         return view('index');
+        
     }
 
     /**
@@ -37,17 +39,17 @@ class AlyaController extends Controller
     public function store(Request $request)
     {
         $rules = $request->validate([
-            'Nama_Lengkap' => 'required|min:5',
+            'Nama Lengkap' => 'required|min:3',
             'Nim' => 'required|min:10',
-            'Tanggal_Lahir' => 'required',
-            'Jenis_Kelamin' => 'required',
-            'Asal_Sekolah' => 'required',
-            'Jalur_Masuk' => 'required',
+            'Tanggal Lahir' => 'required',
+            'Jenis Kelamin' => 'required',
+            'Asal Sekolah' => 'required',
+            'Jalur Masuk' => 'required',
             'Email' => 'required'
-
         ]);
+
         Mahasiswa::create($rules);
-        return redirect('create');
+        return redirect('/Mahasiswa');
     }
 
     /**
